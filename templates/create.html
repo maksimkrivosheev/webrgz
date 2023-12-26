@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавление
+{% endblock %}
+
+{% block body %}
+ <br>Добавление инициативы <br>
+
+<form method="post">
+
+     <br><input type="text" name="title" placeholder="Введите заголовок"> <br>
+     <br><input type="text" name="text" placeholder="Введите суть инициативы"> <br>
+     <br><button class="btn btn-success" type="submit">Добавить</button> <br>
+</form>
+{% endblock %}

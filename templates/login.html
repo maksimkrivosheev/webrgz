@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Авторизация
+{% endblock %}
+
+{% block body %}
+<h1>Вход</h1> <br><br>
+    <h2>Пожалуйста, авторизуйтесь</h2><br><br>
+
+    {% if errors %}
+        <span class="error" style="color: red">{{errors}}</span>
+    {% endif %}
+    <form action="/login" method="post">
+        <div>
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" required>
+        </div><br><br>
+        <div>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+        </div><br><br>
+        <button type="submit">Авторизуйтесь</button>
+    </form>
+{% endblock %}

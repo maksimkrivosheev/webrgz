@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Все инициативы
+{% endblock %}
+
+{% block body %}
+<h1>Все инициативы</h1>
+
+  <div class="row">
+      {% for inic in posts %}
+    <div class="col-md-6 item">
+      <div class="item-in">
+        <h4>{{inic.title}}</h4>
+        <div class="seperator"></div>
+        <p>{{inic.text}}</p>
+        <a href="https://www.roi.ru/">Читать больше об этом на государственном портале...
+          <i class="fa fa-long-arrow-right"></i>
+        </a>
+      </div>
+           <br><button class="bglike" type="submit" color="red">Мне нравится данная инициатива!</button>
+      <button class="bgdislike" type="submit">Мне  не нравится данная инициатива!</button><br>
+    </div>
+      {% endfor %}
+  </div>
+{% endblock %}
